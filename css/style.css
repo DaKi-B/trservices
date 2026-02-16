@@ -179,14 +179,17 @@ p { margin: 0 0 12px; }
   gap: 14px;
 }
 .logo-pill {
-  height: 56px;
+  height: 62px;
   border-radius: 999px;
-  border: 1px dashed rgba(15, 23, 42, 0.25);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   display: grid;
   place-items: center;
   color: var(--muted);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+  font-weight: 600;
 }
+
 
 /* ========== Footer ========== */
 .footer {
