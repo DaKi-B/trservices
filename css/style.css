@@ -254,6 +254,17 @@ p { margin: 0 0 12px; }
   font-size: 0.95rem;
 }
 
+.service-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.2;
+}
+
+.service-card:hover {
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.08);
+  transform: translateY(-4px);
+}
+
 .service-card .list {
   margin-bottom: 0;
 }
