@@ -319,9 +319,6 @@ p { margin: 0 0 12px; }
   text-transform: uppercase;
 }
 
-
-
-
 .link {
   display: inline-block;
   margin-top: 10px;
@@ -339,6 +336,115 @@ p { margin: 0 0 12px; }
 
 .list li {
   margin: 6px 0;
+}
+
+/* ========== Clients ========== */
+
+.clients-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.clients-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.featured-clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.featured-client-card {
+  position: relative;
+  min-height: 170px;
+  padding: 56px 22px 22px;
+  border-radius: 20px;
+  background:
+    radial-gradient(500px 180px at 0% 0%, rgba(37, 99, 235, 0.08), transparent 60%),
+    #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.featured-client-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.1);
+  border-color: rgba(37, 99, 235, 0.18);
+}
+
+.featured-client-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.client-logo {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+.client-logo img {
+  max-height: 38px;
+  max-width: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.9;
+  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.featured-client-card:hover .client-logo img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.featured-client-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  margin-top: auto;
+  line-height: 1.2;
+  color: var(--ink);
+  max-width: 16ch;
+}
+
+@media (max-width: 900px) {
+  .clients-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-client-card {
+    min-height: 140px;
+  }
 }
 
 
