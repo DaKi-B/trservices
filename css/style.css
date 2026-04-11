@@ -220,6 +220,58 @@ p { margin: 0 0 12px; }
   border-color: rgba(255, 0, 0, 0.403);
 }
 
+.service-card {
+  position: relative;
+  overflow: hidden;
+  padding-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), rgba(37, 99, 235, 0.15));
+}
+
+.service-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.service-card .list {
+  margin-bottom: 0;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+.service-card .link {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(37, 99, 235, 0.14);
+  border-color: rgba(37, 99, 235, 0.24);
+}
+
 .link {
   display: inline-block;
   margin-top: 10px;
@@ -241,7 +293,7 @@ p { margin: 0 0 12px; }
 
 
 /* ========== Grid ========== */
-.grid { display: grid; gap: var(--gap); }
+.grid { display: grid; gap: var(--gap); align-items: stretch; }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
@@ -321,45 +373,6 @@ p { margin: 0 0 12px; }
   opacity: 1;
 }
 
-
-
-/* .logo-strip {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 14px;
-}
-.logo-item {
-  height: 72px;
-  border-radius: 16px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: rgba(255,255,255,0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
-}
-
-.logo-item img {
-  max-height: 60px;
-  max-width: 100%;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.85;
-  transition: filter 0.15s ease, opacity 0.15s ease;
-}
-
-.logo-item:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-}
-
-.logo-item:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
-}
- */
 
 /* ========== Footer ========== */
 .footer {
