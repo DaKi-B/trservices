@@ -100,19 +100,48 @@ p { margin: 0 0 12px; }
 
 /* ========== Hero ========== */
 .hero {
-  min-height: 90vh; /* takes 75% of screen height */
+  position: relative;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   padding: 120px 0;
-  background: radial-gradient(900px 400px at 15% 15%, rgba(37,99,235,0.35), transparent 60%),
-              radial-gradient(900px 400px at 85% 25%, rgba(34,197,94,0.22), transparent 60%),
-              var(--ink);
+  overflow: hidden;
+  background: var(--ink);
   color: white;
 }
-.hero .container {
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.95) contrast(1.05) brightness(0.62);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to right, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.62) 45%, rgba(15, 23, 42, 0.72) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 900px;
 }
-.hero p { color: rgba(255,255,255,0.78); max-width: 70ch; }
+
+.hero p {
+  color: rgba(255,255,255,0.82);
+  max-width: 70ch;
+}
 
 /* ========== Components ========== */
 .btn {
