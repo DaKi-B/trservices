@@ -67,6 +67,27 @@ p { margin: 0 0 12px; }
 .lead { font-size: 1.125rem; color: rgba(255,255,255,0.85); }
 .muted { color: var(--muted); }
 
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.logo img {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.logo:hover img {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
 /* ========== Header ========== */
 .site-header {
   position: sticky;
