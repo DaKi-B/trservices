@@ -750,7 +750,7 @@ p { margin: 0 0 12px; }
 
 
 
-/* ========== References ========== */
+
 /* ========== Reference Page ========== */
 
 .section-lead {
@@ -805,4 +805,66 @@ p { margin: 0 0 12px; }
   .reference-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ========== Inner pages / detail pages ========== */
+
+.page-content {
+  display: grid;
+  gap: 24px;
+}
+
+.content-block {
+  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.content-list {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15, 23, 42, 0.78);
+}
+
+.content-list li {
+  margin: 8px 0;
+}
+
+.section-lead {
+  max-width: 64ch;
+  color: rgba(15, 23, 42, 0.72);
+}
+
+.cta-box {
+  padding: 44px 48px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  text-align: left;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.2);
+}
+
+.cta-box h2 {
+  margin-bottom: 10px;
+  color: white;
+  max-width: 20ch;
+}
+
+.cta-box p {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 52ch;
+}
+
+.btn-light {
+  background: white;
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-light:hover {
+  background: rgba(255, 255, 255, 0.92);
 }
