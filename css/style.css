@@ -740,7 +740,7 @@ p { margin: 0 0 12px; }
   display: block;
   max-width: none;
   width: 115%;
-  height: 100%;
+  height: 105%;
   object-fit: cover;
   object-position: center;
   transform: translateX(-8%);
@@ -929,4 +929,140 @@ p { margin: 0 0 12px; }
 
 .btn-light:hover {
   background: rgba(255, 255, 255, 0.92);
+}
+
+
+/* ========== Mobile fixes ========== */
+@media (max-width: 900px) {
+  .site-header .container {
+    position: relative;
+    height: auto;
+    min-height: 64px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .logo img {
+    height: 34px;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px 10px;
+    padding-top: 8px;
+  }
+
+  .main-nav > a {
+    margin-left: 0;
+    padding: 6px 8px;
+    font-size: 0.95rem;
+  }
+
+  .lang-switch {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .lang-switch a {
+    font-size: 0.78rem;
+    padding: 5px 7px;
+  }
+
+  .hero {
+    min-height: 72vh;
+    padding: 88px 0 64px;
+  }
+
+  .hero h1 {
+    max-width: 10ch;
+    font-size: clamp(2.5rem, 10vw, 3.8rem);
+    line-height: 1.05;
+  }
+
+  .hero h3,
+  .hero p {
+    max-width: 28ch;
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+
+  .about-panel {
+    padding: 22px 18px;
+  }
+
+  .grid-3,
+  .grid-4,
+  .featured-clients-grid,
+  .reference-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .logo-grid--5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .clients-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-client-card {
+    min-height: 150px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-section h2 {
+    max-width: none;
+    font-size: clamp(2.1rem, 10vw, 3.2rem);
+    line-height: 1.08;
+  }
+
+  .contact-lead {
+    max-width: 32ch;
+  }
+
+  .map-card {
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    border-width: 3px;
+  }
+
+  .map-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+
+  .content-block,
+  .card,
+  .featured-client-card,
+  .logo-item {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
