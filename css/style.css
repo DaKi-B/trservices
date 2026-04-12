@@ -823,6 +823,10 @@ p { margin: 0 0 12px; }
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
 }
 
+.page-content > .content-block:not(.cta-box):nth-child(even) {
+  background: #f8fafc;
+}
+
 .content-list {
   margin: 0;
   padding-left: 18px;
@@ -838,7 +842,12 @@ p { margin: 0 0 12px; }
   color: rgba(15, 23, 42, 0.72);
 }
 
+.section-light .section-head .section-lead {
+  max-width: 56ch;
+}
+
 .cta-box {
+  margin-top: 12px;
   padding: 44px 48px;
   border-radius: 20px;
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
