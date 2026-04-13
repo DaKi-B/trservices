@@ -47,7 +47,7 @@
           komunikacione sisteme, multimedijalna rešenja i tehnološke platforme za zahtevna
           poslovna okruženja.
         </p>
-        
+
       </div>
     </div>
   </section>
@@ -133,5 +133,21 @@
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>lucide.createIcons();</script>
+  <script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    revealObserver.observe(el);
+  });
+  </script>
 </body>
 </html>
