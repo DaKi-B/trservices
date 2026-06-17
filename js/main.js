@@ -33,3 +33,60 @@ if (statNumbers.length) {
 
   statNumbers.forEach((number) => countObserver.observe(number));
 }
+
+const caseTrack = document.querySelector('.case-track');
+const casePrev = document.querySelector('.case-arrow-prev');
+const caseNext = document.querySelector('.case-arrow-next');
+
+if (caseTrack && casePrev && caseNext) {
+  const getScrollAmount = () => {
+    const firstCard = caseTrack.querySelector('.case-card');
+    if (!firstCard) return 420;
+
+    const trackStyles = window.getComputedStyle(caseTrack);
+    const gap = parseFloat(trackStyles.columnGap || trackStyles.gap || 22);
+
+    return firstCard.offsetWidth + gap;
+  };
+
+  const scrollToStart = () => {
+    caseTrack.scrollTo({
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToEnd = () => {
+    caseTrack.scrollTo({
+      left: caseTrack.scrollWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  caseNext.addEventListener('click', () => {
+    const maxScrollLeft = caseTrack.scrollWidth - caseTrack.clientWidth;
+    const nearEnd = caseTrack.scrollLeft >= maxScrollLeft - 10;
+
+    if (nearEnd) {
+      scrollToStart();
+    } else {
+      caseTrack.scrollBy({
+        left: getScrollAmount(),
+        behavior: 'smooth'
+      });
+    }
+  });
+
+  casePrev.addEventListener('click', () => {
+    const nearStart = caseTrack.scrollLeft <= 10;
+
+    if (nearStart) {
+      scrollToEnd();
+    } else {
+      caseTrack.scrollBy({
+        left: -getScrollAmount(),
+        behavior: 'smooth'
+      });
+    }
+  });
+}
