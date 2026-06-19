@@ -1013,15 +1013,20 @@ p { margin: 0 0 12px; }
 
 /* Featured */
 .logo-item--featured {
-  height: 130px;
-  padding: 14px 20px;
+  width: 240px;
+  height: 180px;
+  padding: 8px 14px;
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.86));
   border-color: rgba(255, 0, 0, 0.18);
 }
 
 .logo-item--featured img {
-  max-height: 130px;
+  max-height: 165px;
+  max-width: 250px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   filter: grayscale(0%);
   opacity: 1;
 }
