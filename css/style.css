@@ -948,6 +948,20 @@ p { margin: 0 0 12px; }
   }
 }
 
+/* Stadion Dubočica gallery positioning */
+
+.stadium-gallery-screen {
+  object-position: center center;
+}
+
+.stadium-gallery-rack {
+  object-position: center 38%;
+}
+
+.stadium-gallery-wifi {
+  object-position: center 22%;
+}
+
 
 /* ========== Grid ========== */
 .grid { display: grid; gap: var(--gap); align-items: stretch; }
