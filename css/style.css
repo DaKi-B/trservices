@@ -2069,3 +2069,64 @@ p { margin: 0 0 12px; }
   }
 }
 
+
+/* ============================================
+   Case detail: additional components
+   (stats strip, 4-card scope grid, result points)
+   ============================================ */
+
+.case-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.case-detail-stat-value {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: rgb(255, 0, 0);
+}
+
+.case-detail-stat-label {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.case-detail-scope-grid--four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-detail-result-points {
+  display: grid;
+  gap: 26px;
+}
+
+.case-detail-result-point h3 {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.case-detail-result-point p {
+  max-width: 60ch;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+@media (max-width: 900px) {
+  .case-detail-scope-grid--four {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-detail-stats {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
