@@ -2130,3 +2130,11 @@ p { margin: 0 0 12px; }
     gap: 18px;
   }
 }
+/* Belgrade Airport gallery crop tuning */
+.airport-gallery-wall-main {
+  object-position: center 35%;
+}
+
+.airport-gallery-portrait {
+  object-position: center 40%;
+}
