@@ -2138,35 +2138,21 @@ p { margin: 0 0 12px; }
 .airport-gallery-portrait {
   object-position: center 40%;
 }
-/* Case detail: gallery layout variants */
-.case-detail-gallery--duo {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: 420px;
+/* Hero: centered layout */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.case-detail-gallery--duo figure:first-child {
-  grid-row: auto;
+.hero-content h1 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.case-detail-gallery--solo {
-  grid-template-columns: 1fr;
-  grid-template-rows: minmax(320px, 60vh);
-}
-
-.case-detail-gallery--solo figure:first-child {
-  grid-row: auto;
-}
-
-@media (max-width: 900px) {
-  .case-detail-gallery--duo {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 300px);
-  }
-}
-
-/* Case detail: compact solo gallery for smaller source images */
-.case-detail-gallery--compact {
-  max-width: 720px;
-  margin: 0 auto;
-  grid-template-rows: 360px;
+.hero-content h3 {
+  max-width: 48ch;
+  margin-left: auto;
+  margin-right: auto;
 }
