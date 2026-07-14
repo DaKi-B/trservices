@@ -1,120 +1,178 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mrežna rešenja | TR Services</title>
+  <meta name="description" content="Projektovanje, implementacija i optimizacija mrežne infrastrukture za sigurnu, stabilnu i skalabilnu povezanost u poslovnim, hotelskim, zdravstvenim i industrijskim okruženjima.">
+
   <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any">
   <link rel="icon" href="../../img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../../img/favicon/favicon-96x96.png" type="image/png">
   <link rel="apple-touch-icon" href="../../img/favicon/apple-touch-icon.png">
   <link rel="manifest" href="../../img/favicon/site.webmanifest">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
 
+  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container">
       <a href="../index.html" class="logo">
         <img src="../../img/trsLogo.png" alt="TR Services logo">
       </a>
+
       <nav class="main-nav">
-        <a href="../pages/o-nama.html">O nama</a>
+        <a href="o-nama.html">O nama</a>
         <a href="../index.html#services">Servisi</a>
         <a href="../index.html#solutions">Rešenja</a>
         <a href="../index.html#clients">Klijenti</a>
         <a href="../index.html#partners">Partneri</a>
         <a href="../index.html#contact">Kontakt</a>
+
         <div class="lang-switch">
-          <a href="../pages/mreza.html" class="active">SR</a>
-          <a href="../../en/pages/networking.html">EN</a>
+          <a href="mreza.html" class="active">SR</a>
+          <a href="../../en/pages/network.html">EN</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-head">
+  <main>
+
+    <!-- Hero -->
+    <section class="service-hero">
+      <div class="service-hero-media">
+        <img src="../../img/case-studies/stadion-dubocica/network-rack-overview.jpg" alt="Aktivna mrežna oprema u rek ormanu">
+      </div>
+
+      <div class="service-hero-overlay"></div>
+
+      <div class="service-hero-content reveal">
         <h1>Mrežna rešenja</h1>
-        <p class="section-lead">
-          Projektujemo, implementiramo i optimizujemo mrežnu infrastrukturu za sigurnu,
-          stabilnu i skalabilnu povezanost u poslovnim, hotelskim, zdravstvenim i industrijskim okruženjima.
-        </p>
+        <p>Projektujemo, implementiramo i optimizujemo mrežnu infrastrukturu za sigurnu, stabilnu i skalabilnu povezanost u poslovnim, hotelskim, zdravstvenim i industrijskim okruženjima.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container page-content">
-
-      <div class="content-block">
-        <h2>Mreža kao osnova celog sistema</h2>
-        <p>
-          Kvalitetna mrežna infrastruktura predstavlja osnovu savremenih IT, AV i bezbednosnih sistema.
-          Zato TR Services pristupa mrežnim rešenjima sistemski, sa fokusom na pouzdanost, performanse,
-          sigurnost i mogućnost budućeg razvoja. Svaki projekat projektuje se u skladu sa realnim potrebama
-          korisnika, tipom objekta i očekivanim opterećenjem sistema.
-        </p>
+    <!-- Intro -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="service-intro reveal">
+          <h2>Mreža kao osnova celog sistema</h2>
+          <p>Kvalitetna mrežna infrastruktura predstavlja osnovu savremenih IT, AV i bezbednosnih sistema. Zato TR Services pristupa mrežnim rešenjima sistemski, sa fokusom na pouzdanost, performanse, sigurnost i mogućnost budućeg razvoja. Svaki projekat projektuje se u skladu sa realnim potrebama korisnika, tipom objekta i očekivanim opterećenjem sistema.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Šta obuhvataju naša mrežna rešenja</h2>
-        <ul class="content-list">
-          <li>Projektovanje i implementaciju LAN i WAN infrastrukture</li>
-          <li>Wi-Fi sisteme za poslovne i javne prostore</li>
-          <li>Captive portal rešenja za goste i korisnike</li>
-          <li>Segmentaciju mreže i organizaciju saobraćaja po servisima i zonama</li>
-          <li>Optimizaciju performansi, dostupnosti i sigurnosti mreže</li>
-        </ul>
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+
+        <div class="case-detail-section-head reveal">
+          <div class="case-detail-kicker">Obim rešenja</div>
+          <h2>Šta obuhvataju naša mrežna rešenja</h2>
+        </div>
+
+        <div class="service-features-grid">
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="network"></i>
+            </div>
+            <h3>LAN i WAN infrastruktura</h3>
+            <p>Projektovanje i implementacija žične mrežne infrastrukture za povezivanje lokacija i sistema.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="wifi"></i>
+            </div>
+            <h3>Wi-Fi sistemi</h3>
+            <p>Bežična pokrivenost za poslovne i javne prostore, prilagođena gustini korisnika i tipu prostora.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="globe"></i>
+            </div>
+            <h3>Captive portal</h3>
+            <p>Kontrolisan pristup mreži za goste i korisnike, uz jednostavnu prijavu i upravljanje.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3>Segmentacija mreže</h3>
+            <p>Organizacija saobraćaja po servisima i zonama, radi sigurnosti i preglednosti sistema.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="gauge"></i>
+            </div>
+            <h3>Optimizacija performansi</h3>
+            <p>Unapređenje dostupnosti, propusnosti i sigurnosti postojeće mrežne infrastrukture.</p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Prilagođeno različitim operativnim okruženjima</h2>
-        <p>
-          Mrežna infrastruktura ne može biti univerzalna. Zahtevi kancelarijskog prostora,
-          hotela, bolnice ili industrijskog pogona se značajno razlikuju. Zbog toga mrežna rešenja
-          prilagođavamo konkretnim uslovima rada, gustini korisnika, tipu servisa i očekivanoj dostupnosti.
-          Posebna pažnja posvećuje se stabilnosti i dugoročnoj održivosti sistema.
-        </p>
+    <!-- Detail rows -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="service-split">
+          <div class="service-split-copy reveal">
+            <h2>Prilagođeno različitim operativnim okruženjima</h2>
+            <p>Mrežna infrastruktura ne može biti univerzalna. Zahtevi kancelarijskog prostora, hotela, bolnice ili industrijskog pogona se značajno razlikuju. Zbog toga mrežna rešenja prilagođavamo konkretnim uslovima rada, gustini korisnika, tipu servisa i očekivanoj dostupnosti. Posebna pažnja posvećuje se stabilnosti i dugoročnoj održivosti sistema.</p>
+          </div>
+          <div class="service-split-media reveal">
+            <img src="../../img/case-studies/stadion-dubocica/stadium-corridor-wifi.png" alt="Wi-Fi pristupna tačka u unutrašnjosti objekta" loading="lazy">
+          </div>
+        </div>
+        <div class="service-split service-split--flip">
+          <div class="service-split-copy reveal">
+            <h2>Integracija sa ostalim sistemima</h2>
+            <p>Mreža je osnova preko koje funkcionišu telefonija, IPTV, digital signage, video wall, sistemi kontrole pristupa, CCTV i druge tehnološke celine. Zato svako mrežno rešenje projektujemo kao deo šireg integrisanog sistema, uz jasno definisanu strukturu, preglednost i mogućnost jednostavnijeg upravljanja i održavanja.</p>
+          </div>
+          <div class="service-split-media reveal">
+            <img src="../../img/case-studies/boge-rubber-plastics/network-rack-active-equipment.jpg" alt="Aktivna mrežna oprema povezana u rek ormanu" loading="lazy">
+          </div>
+        </div>
+        <div class="service-split">
+          <div class="service-split-copy reveal">
+            <h2>Fokus na stabilnost i skalabilnost</h2>
+            <p>Dobro projektovana mreža mora da bude spremna i za današnje i za buduće zahteve. Naš pristup uključuje planiranje kapaciteta, preglednu organizaciju infrastrukture, rezervu za širenje sistema i podršku za buduće servise i dodatne lokacije. Rezultat je mreža koja nije samo funkcionalna, već predstavlja pouzdanu osnovu za dalji rast poslovanja.</p>
+          </div>
+          <div class="service-split-media reveal">
+            <img src="../../img/case-studies/boge-rubber-plastics/server-room-racks.jpg" alt="Server sala sa rek ormanima" loading="lazy">
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Integracija sa ostalim sistemima</h2>
-        <p>
-          Mreža je osnova preko koje funkcionišu telefonija, IPTV, digital signage, video wall,
-          sistemi kontrole pristupa, CCTV i druge tehnološke celine. Zato svako mrežno rešenje projektujemo
-          kao deo šireg integrisanog sistema, uz jasno definisanu strukturu, preglednost i mogućnost
-          jednostavnijeg upravljanja i održavanja.
-        </p>
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="content-block cta-box reveal">
+          <h2>Potrebno vam je mrežno rešenje prilagođeno vašem sistemu?</h2>
+          <p>Kontaktirajte nas za konsultacije i predlog mrežne infrastrukture prilagođene vašem objektu, broju korisnika i tipu servisa koji se oslanjaju na mrežu.</p>
+          <a href="../index.html#contact" class="btn btn-primary btn-light">Kontaktirajte nas</a>
+        </div>
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Fokus na stabilnost i skalabilnost</h2>
-        <p>
-          Dobro projektovana mreža mora da bude spremna i za današnje i za buduće zahteve.
-          Naš pristup uključuje planiranje kapaciteta, preglednu organizaciju infrastrukture,
-          rezervu za širenje sistema i podršku za buduće servise i dodatne lokacije. Rezultat je mreža
-          koja nije samo funkcionalna, već predstavlja pouzdanu osnovu za dalji rast poslovanja.
-        </p>
-      </div>
-
-      <div class="content-block cta-box">
-        <h2>Potrebno vam je mrežno rešenje prilagođeno vašem sistemu?</h2>
-        <p>
-          Kontaktirajte nas za konsultacije i predlog mrežne infrastrukture prilagođene vašem objektu,
-          broju korisnika i tipu servisa koji se oslanjaju na mrežu.
-        </p>
-        <a href="../index.html#contact" class="btn btn-primary btn-light">Kontaktirajte nas</a>
-      </div>
-
-    </div>
-  </section>
+  </main>
 
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="../../js/main.js"></script>
+
 </body>
 </html>

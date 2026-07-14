@@ -2138,21 +2138,160 @@ p { margin: 0 0 12px; }
 .airport-gallery-portrait {
   object-position: center 40%;
 }
-/* Hero: centered layout */
-.hero-content {
+/* ============================================
+   Service pages (telefonija, mreza, multimedija, security)
+   ============================================ */
+
+.service-hero {
+  position: relative;
+  min-height: 52vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #10141a 0%, #1d232c 55%, #2a313c 100%);
+}
+
+.service-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.service-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.02) brightness(0.55);
+}
+
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 13, 18, 0.45) 0%,
+    rgba(10, 13, 18, 0.72) 100%
+  );
+}
+
+.service-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  padding: 120px 24px 96px;
+}
+
+.service-hero-content h1 {
+  font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.08;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+.service-hero-content p {
+  max-width: 62ch;
+  margin: 0 auto;
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.service-intro {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.hero-content h1 {
-  margin-left: auto;
-  margin-right: auto;
+.service-intro h2 {
+  margin-bottom: 18px;
 }
 
-.hero-content h3 {
-  max-width: 48ch;
-  margin-left: auto;
-  margin-right: auto;
+.service-intro p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.service-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.service-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 88px;
+}
+
+.service-split:last-of-type {
+  margin-bottom: 0;
+}
+
+.service-split-copy h2 {
+  margin-bottom: 16px;
+}
+
+.service-split-copy p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.service-split-media img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12);
+}
+
+.service-split--flip .service-split-media {
+  order: -1;
+}
+
+.service-media-placeholder {
+  height: 380px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.35);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255, 0, 0, 0.10), transparent 55%),
+    linear-gradient(135deg, #161a20 0%, #262c36 100%);
+}
+
+.service-media-placeholder i,
+.service-media-placeholder svg {
+  width: 52px;
+  height: 52px;
+}
+
+@media (max-width: 900px) {
+  .service-hero {
+    min-height: 44vh;
+  }
+
+  .service-hero-content {
+    padding: 96px 20px 72px;
+  }
+
+  .service-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .service-split--flip .service-split-media {
+    order: 2;
+  }
+
+  .service-split-media img,
+  .service-media-placeholder {
+    height: 260px;
+  }
 }

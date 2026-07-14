@@ -1,118 +1,179 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bezbednosna rešenja | TR Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bezbednost | TR Services</title>
+  <meta name="description" content="Bezbednosni sistemi koji štite objekte, korisnike i infrastrukturu, od kontrole pristupa i video nadzora do mrežne sigurnosti.">
+
   <link rel="icon" href="../../img/favicon/favicon.ico" sizes="any">
   <link rel="icon" href="../../img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="../../img/favicon/favicon-96x96.png" type="image/png">
   <link rel="apple-touch-icon" href="../../img/favicon/apple-touch-icon.png">
   <link rel="manifest" href="../../img/favicon/site.webmanifest">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
 
+  <!-- Header / Nav -->
   <header class="site-header">
     <div class="container">
       <a href="../index.html" class="logo">
         <img src="../../img/trsLogo.png" alt="TR Services logo">
       </a>
+
       <nav class="main-nav">
-        <a href="../pages/o-nama.html">O nama</a>
+        <a href="o-nama.html">O nama</a>
         <a href="../index.html#services">Servisi</a>
         <a href="../index.html#solutions">Rešenja</a>
         <a href="../index.html#clients">Klijenti</a>
         <a href="../index.html#partners">Partneri</a>
         <a href="../index.html#contact">Kontakt</a>
+
         <div class="lang-switch">
-          <a href="../pages/security.html" class="active">SR</a>
+          <a href="security.html" class="active">SR</a>
           <a href="../../en/pages/security.html">EN</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-head">
+  <main>
+
+    <!-- Hero -->
+    <section class="service-hero">
+
+      <div class="service-hero-overlay"></div>
+
+      <div class="service-hero-content reveal">
         <h1>Bezbednost</h1>
-        <p class="section-lead">
-          Projektujemo i implementiramo bezbednosne sisteme koji štite objekte,
-          korisnike i infrastrukturu, od kontrole pristupa i video nadzora do mrežne sigurnosti.
-        </p>
+        <p>Projektujemo i implementiramo bezbednosne sisteme koji štite objekte, korisnike i infrastrukturu, od kontrole pristupa i video nadzora do mrežne sigurnosti.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container page-content">
-
-      <div class="content-block">
-        <h2>Bezbednost kao deo ukupnog sistema</h2>
-        <p>
-          Savremeni bezbednosni sistemi ne služe samo za reakciju na incident, već za svakodnevnu
-          kontrolu, preglednost i upravljanje pristupom, prostorom i infrastrukturom. TR Services
-          pristupa sigurnosnim rešenjima kao delu šire tehnološke celine, sa ciljem da sistemi budu
-          pouzdani, pregledni i prilagođeni realnim operativnim uslovima korisnika.
-        </p>
+    <!-- Intro -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="service-intro reveal">
+          <h2>Bezbednost kao deo ukupnog sistema</h2>
+          <p>Savremeni bezbednosni sistemi ne služe samo za reakciju na incident, već za svakodnevnu kontrolu, preglednost i upravljanje pristupom, prostorom i infrastrukturom. TR Services pristupa sigurnosnim rešenjima kao delu šire tehnološke celine, sa ciljem da sistemi budu pouzdani, pregledni i prilagođeni realnim operativnim uslovima korisnika.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Šta obuhvataju naša bezbednosna rešenja</h2>
-        <ul class="content-list">
-          <li>Kontrolu pristupa za objekte različitih veličina i namena</li>
-          <li>CCTV video nadzor za preglednost i evidenciju događaja</li>
-          <li>Firewall zaštitu i osnovu mrežne sigurnosti</li>
-          <li>Segmentaciju pristupa i organizaciju bezbednosnih zona</li>
-          <li>Integraciju sigurnosnih sistema sa ostatkom IT i AV infrastrukture</li>
-        </ul>
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+
+        <div class="case-detail-section-head reveal">
+          <div class="case-detail-kicker">Obim rešenja</div>
+          <h2>Šta obuhvataju naša bezbednosna rešenja</h2>
+        </div>
+
+        <div class="service-features-grid">
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="key-round"></i>
+            </div>
+            <h3>Kontrola pristupa</h3>
+            <p>Upravljanje pristupom za objekte različitih veličina i namena, po zonama i nivoima prava.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="cctv"></i>
+            </div>
+            <h3>CCTV video nadzor</h3>
+            <p>Preglednost prostora i evidencija događaja, uz centralizovan pregled zapisa.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="shield"></i>
+            </div>
+            <h3>Firewall zaštita</h3>
+            <p>Osnova mrežne sigurnosti i kontrola saobraćaja između zona i servisa.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="layers"></i>
+            </div>
+            <h3>Bezbednosne zone</h3>
+            <p>Segmentacija pristupa i organizacija prostora po nivoima rizika.</p>
+          </article>
+          <article class="case-detail-scope-card reveal">
+            <div class="case-detail-scope-icon">
+              <i data-lucide="blocks"></i>
+            </div>
+            <h3>Integracija sistema</h3>
+            <p>Povezivanje sigurnosnih sistema sa ostatkom IT i AV infrastrukture objekta.</p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Prilagođeno objektu i nivou rizika</h2>
-        <p>
-          Bezbednosni zahtevi značajno se razlikuju u zavisnosti od tipa objekta i načina korišćenja prostora.
-          Kancelarijski objekti, hoteli, zdravstvene ustanove, industrijski kompleksi i kontrolni centri
-          imaju različite prioritete, procedure i nivoe pristupa. Zbog toga svako rešenje razvijamo u skladu
-          sa konkretnim operativnim scenarijima i očekivanim rizicima.
-        </p>
+    <!-- Detail rows -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="service-split">
+          <div class="service-split-copy reveal">
+            <h2>Prilagođeno objektu i nivou rizika</h2>
+            <p>Bezbednosni zahtevi značajno se razlikuju u zavisnosti od tipa objekta i načina korišćenja prostora. Kancelarijski objekti, hoteli, zdravstvene ustanove, industrijski kompleksi i kontrolni centri imaju različite prioritete, procedure i nivoe pristupa. Zbog toga svako rešenje razvijamo u skladu sa konkretnim operativnim scenarijima i očekivanim rizicima.</p>
+          </div>
+          <div class="service-split-media reveal">
+            <img src="../../img/case-studies/minth/cctv-camera.jpg" alt="CCTV kamera u okviru sistema video-nadzora industrijskog objekta" loading="lazy">
+          </div>
+        </div>
+        <div class="service-split service-split--flip">
+          <div class="service-split-copy reveal">
+            <h2>Preglednost i upravljanje u realnom vremenu</h2>
+            <p>Efikasan bezbednosni sistem mora da omogući jasnu preglednost događaja i jednostavno upravljanje. Naš pristup uključuje izbor platformi koje podržavaju centralizovanu kontrolu, pregled zapisa, upravljanje korisnicima i pristupnim tačkama, kao i bolju koordinaciju između fizičke i mrežne bezbednosti.</p>
+          </div>
+          <div class="service-split-media reveal">
+            <div class="service-media-placeholder" aria-hidden="true">
+              <i data-lucide="image"></i>
+            </div>
+          </div>
+        </div>
+        <div class="service-split">
+          <div class="service-split-copy reveal">
+            <h2>Dugoročna stabilnost i podrška</h2>
+            <p>Pored same implementacije, važan deo svakog sigurnosnog sistema je i njegova dugoročna pouzdanost. Zato projektujemo rešenja koja su stabilna, lako održiva i spremna za dalje proširenje, uz podršku koja omogućava da sistem ostane funkcionalan i pregledan tokom svakodnevnog rada.</p>
+          </div>
+          <div class="service-split-media reveal">
+            <div class="service-media-placeholder" aria-hidden="true">
+              <i data-lucide="image"></i>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Preglednost i upravljanje u realnom vremenu</h2>
-        <p>
-          Efikasan bezbednosni sistem mora da omogući jasnu preglednost događaja i jednostavno upravljanje.
-          Naš pristup uključuje izbor platformi koje podržavaju centralizovanu kontrolu, pregled zapisa,
-          upravljanje korisnicima i pristupnim tačkama, kao i bolju koordinaciju između fizičke i mrežne bezbednosti.
-        </p>
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="content-block cta-box reveal">
+          <h2>Potrebno vam je bezbednosno rešenje prilagođeno vašem objektu?</h2>
+          <p>Kontaktirajte nas za konsultacije i predlog sistema koji povezuje fizičku i mrežnu bezbednost u jednu stabilnu i preglednu celinu.</p>
+          <a href="../index.html#contact" class="btn btn-primary btn-light">Kontaktirajte nas</a>
+        </div>
       </div>
+    </section>
 
-      <div class="content-block">
-        <h2>Dugoročna stabilnost i podrška</h2>
-        <p>
-          Pored same implementacije, važan deo svakog sigurnosnog sistema je i njegova dugoročna pouzdanost.
-          Zato projektujemo rešenja koja su stabilna, lako održiva i spremna za dalje proširenje, uz podršku
-          koja omogućava da sistem ostane funkcionalan i pregledan tokom svakodnevnog rada.
-        </p>
-      </div>
-
-      <div class="content-block cta-box">
-        <h2>Potrebno vam je bezbednosno rešenje prilagođeno vašem objektu?</h2>
-        <p>
-          Kontaktirajte nas za konsultacije i predlog sistema koji povezuje fizičku i mrežnu bezbednost
-          u jednu stabilnu i preglednu celinu.
-        </p>
-        <a href="../index.html#contact" class="btn btn-primary btn-light">Kontaktirajte nas</a>
-      </div>
-
-    </div>
-  </section>
+  </main>
 
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="../../js/main.js"></script>
+
 </body>
 </html>
