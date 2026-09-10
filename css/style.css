@@ -32,7 +32,30 @@
 
 /* ========== Base ========== */
 html, body {
-  overflow-x: hidden;
+  /* clip (not hidden) so the sticky header keeps working */
+  overflow-x: clip;
+}
+
+/* Fallback for browsers without overflow: clip */
+@supports not (overflow: clip) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  body {
+    padding-top: 64px;
+  }
+}
+
+/* Keep anchored sections clear of the sticky header */
+section[id] {
+  scroll-margin-top: 84px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -2652,3 +2675,11 @@ p { margin: 0 0 12px; }
 .content-block h2 + .content-subhead {
   margin-top: 12px;
 }
+
+
+/* Per-logo sizing for newly added client logos */
+.client-logo-hutchinson { max-height: 26px; max-width: 200px; }
+.client-logo-uzice      { max-height: 34px; max-width: 210px; }
+.client-logo-beograd    { max-height: 58px; max-width: 90px; }
+.client-logo-parking    { max-height: 58px; max-width: 90px; }
+.client-logo-posta      { max-height: 48px; max-width: 170px; }
