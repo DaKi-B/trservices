@@ -2748,3 +2748,23 @@ p { margin: 0 0 12px; }
     max-width: 106px;
   }
 }
+
+/* Featured certification badge on the about page */
+.quality-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 22px 0 26px;
+  padding: 18px 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+.quality-badge img {
+  max-height: 64px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+}
