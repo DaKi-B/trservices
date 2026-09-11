@@ -2683,3 +2683,118 @@ p { margin: 0 0 12px; }
 .client-logo-beograd    { max-height: 58px; max-width: 90px; }
 .client-logo-parking    { max-height: 58px; max-width: 90px; }
 .client-logo-posta      { max-height: 48px; max-width: 170px; }
+
+/* ============================================
+   Partner strip (Alliance-style band above footer)
+   and per-service partner strips
+   ============================================ */
+
+.ticker-section--strip {
+  padding: 48px 0 8px;
+  background: #f8fafc;
+  border-top: 1px solid rgba(15, 23, 42, 0.07);
+}
+
+.ticker-label {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Flat band: no card, no border, no shadow */
+.ticker-section--strip .ticker-wrap {
+  padding: 18px 0 44px;
+}
+
+.ticker-section--strip .ticker-inner {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.ticker-section--strip .ticker-item {
+  height: 72px;
+  padding: 0 40px;
+  border-right: 0;
+}
+
+.ticker-section--strip .ticker-item img {
+  max-height: 38px;
+  max-width: 140px;
+  opacity: 0.62;
+}
+
+.ticker-section--strip .ticker-item:hover img {
+  opacity: 1;
+}
+
+/* Service-page variant: sits on white, tighter */
+.ticker-section--service {
+  padding: 8px 0 0;
+  background: #ffffff;
+  border-top: 0;
+}
+
+.ticker-section--service .ticker-wrap {
+  padding: 14px 0 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track {
+    animation: none;
+  }
+
+  .ticker-inner {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .ticker-section--strip .ticker-item {
+    padding: 0 26px;
+  }
+
+  .ticker-section--strip .ticker-item img {
+    max-height: 32px;
+    max-width: 110px;
+  }
+}
+
+/* Three-copy track (used when a strip has few logos) */
+.ticker-track--triple {
+  animation-name: ticker-scroll-triple;
+  animation-duration: 34s;
+}
+
+@keyframes ticker-scroll-triple {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+
+/* Featured certification badge on the about page */
+.quality-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 22px 0 26px;
+  padding: 18px 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+.quality-badge img {
+  max-height: 64px;
+  max-width: 240px;
+  object-fit: contain;
+}
