@@ -2455,118 +2455,6 @@ p { margin: 0 0 12px; }
    Partner ticker + site footer
    ============================================ */
 
-.ticker-section {
-  padding: 56px 0 0;
-  background: #ffffff;
-}
-
-.ticker-head {
-  max-width: 760px;
-  margin: 0 auto 28px;
-  text-align: center;
-}
-
-.ticker-head h2 {
-  margin-bottom: 10px;
-}
-
-.ticker-head p {
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.ticker-wrap {
-  overflow: hidden;
-  padding: 8px 0 56px;
-}
-
-.ticker-inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 12px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-}
-
-.ticker-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  animation: ticker-scroll 42s linear infinite;
-}
-
-.ticker-inner:hover .ticker-track {
-  animation-play-state: paused;
-}
-
-.ticker-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  height: 92px;
-  padding: 0 44px;
-  border-right: 1px solid rgba(15, 23, 42, 0.08);
-  white-space: nowrap;
-}
-
-.ticker-item img {
-  max-height: 42px;
-  max-width: 150px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.72;
-  transition: filter 0.25s ease, opacity 0.25s ease;
-}
-
-.ticker-item:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-.ticker-item span {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: rgba(15, 23, 42, 0.5);
-  letter-spacing: -0.01em;
-  transition: color 0.25s ease;
-}
-
-.ticker-item:hover span {
-  color: rgba(15, 23, 42, 0.9);
-}
-
-@keyframes ticker-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track {
-    animation: none;
-  }
-}
-
-/* Text-only partner names in the logo grid */
-.logo-item-name {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: rgba(15, 23, 42, 0.45);
-  letter-spacing: -0.01em;
-  transition: color 0.25s ease;
-}
-
-.logo-item:hover .logo-item-name {
-  color: rgba(15, 23, 42, 0.85);
-}
-
-/* Site footer */
 .site-footer {
   padding: 48px 0;
   background: #0f172a;
@@ -2684,117 +2572,179 @@ p { margin: 0 0 12px; }
 .client-logo-parking    { max-height: 58px; max-width: 90px; }
 .client-logo-posta      { max-height: 48px; max-width: 170px; }
 
-/* ============================================
-   Partner strip (Alliance-style band above footer)
-   and per-service partner strips
-   ============================================ */
-
-.ticker-section--strip {
-  padding: 48px 0 8px;
-  background: #f8fafc;
-  border-top: 1px solid rgba(15, 23, 42, 0.07);
+.partner-band {
+  position: relative;
+  padding: 76px 0 82px;
+  overflow: hidden;
+  background:
+    radial-gradient(680px 260px at 12% 0%, rgba(255, 0, 0, 0.05), transparent 62%),
+    radial-gradient(620px 260px at 88% 100%, rgba(15, 23, 42, 0.06), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f6f8fb 46%, #eef2f7 100%);
 }
 
-.ticker-label {
-  margin: 0 0 4px;
+/* hairline rules top and bottom */
+.partner-band::before,
+.partner-band::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(15, 23, 42, 0.12) 22%,
+    rgba(15, 23, 42, 0.12) 78%,
+    transparent
+  );
+}
+
+.partner-band::before { top: 0; }
+.partner-band::after  { bottom: 0; }
+
+.partner-band-head {
+  max-width: 720px;
+  margin: 0 auto 42px;
   text-align: center;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+}
+
+.partner-band-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+  color: rgb(230, 0, 0);
+}
+
+.partner-band-kicker::before,
+.partner-band-kicker::after {
+  content: "";
+  width: 26px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.15), rgb(255, 0, 0));
+}
+
+.partner-band-kicker::after {
+  background: linear-gradient(90deg, rgb(255, 0, 0), rgba(255, 0, 0, 0.15));
+}
+
+.partner-band-head h2 {
+  margin-bottom: 12px;
+}
+
+.partner-band-head p {
+  margin: 0;
   color: var(--muted);
+  line-height: 1.75;
 }
 
-/* Flat band: no card, no border, no shadow */
-.ticker-section--strip .ticker-wrap {
-  padding: 18px 0 44px;
+/* Marquee rows */
+.partner-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
 }
 
-.ticker-section--strip .ticker-inner {
-  max-width: 100%;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+.partner-marquee + .partner-marquee {
+  margin-top: 18px;
 }
 
-.ticker-section--strip .ticker-item {
-  height: 72px;
-  padding: 0 40px;
-  border-right: 0;
+.partner-track {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: max-content;
+  padding: 6px 9px;
+  animation: partner-scroll 48s linear infinite;
 }
 
-.ticker-section--strip .ticker-item img {
-  max-height: 38px;
-  max-width: 140px;
-  opacity: 0.62;
+.partner-track--reverse {
+  animation-direction: reverse;
 }
 
-.ticker-section--strip .ticker-item:hover img {
+.partner-marquee:hover .partner-track {
+  animation-play-state: paused;
+}
+
+@keyframes partner-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Logo chips */
+.partner-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 186px;
+  height: 92px;
+  padding: 0 22px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.partner-chip img {
+  max-height: 42px;
+  max-width: 132px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.28s ease, opacity 0.28s ease;
+}
+
+.partner-chip:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 0, 0, 0.3);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.partner-chip:hover img {
+  filter: grayscale(0%);
   opacity: 1;
 }
 
-/* Service-page variant: sits on white, tighter */
-.ticker-section--service {
-  padding: 8px 0 0;
-  background: #ffffff;
-  border-top: 0;
+/* Service-page variant: single row, no heading block */
+.partner-band--service {
+  padding: 60px 0 64px;
 }
 
-.ticker-section--service .ticker-wrap {
-  padding: 14px 0 8px;
+.partner-band--service .partner-band-head {
+  margin-bottom: 34px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ticker-track {
+  .partner-track {
     animation: none;
   }
 
-  .ticker-inner {
+  .partner-marquee {
     overflow-x: auto;
   }
 }
 
 @media (max-width: 640px) {
-  .ticker-section--strip .ticker-item {
-    padding: 0 26px;
+  .partner-band {
+    padding: 58px 0 62px;
   }
 
-  .ticker-section--strip .ticker-item img {
-    max-height: 32px;
-    max-width: 110px;
+  .partner-chip {
+    width: 150px;
+    height: 78px;
+    padding: 0 16px;
   }
-}
 
-/* Three-copy track (used when a strip has few logos) */
-.ticker-track--triple {
-  animation-name: ticker-scroll-triple;
-  animation-duration: 34s;
-}
-
-@keyframes ticker-scroll-triple {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.3333%); }
-}
-
-/* Featured certification badge on the about page */
-.quality-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 22px 0 26px;
-  padding: 18px 28px;
-  border-radius: 16px;
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
-}
-
-.quality-badge img {
-  max-height: 64px;
-  max-width: 240px;
-  object-fit: contain;
+  .partner-chip img {
+    max-height: 34px;
+    max-width: 106px;
+  }
 }
