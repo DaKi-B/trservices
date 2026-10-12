@@ -1,4 +1,5 @@
 const statNumbers = document.querySelectorAll('[data-count]');
+const numberLocale = document.documentElement.lang === 'en' ? 'en-GB' : 'sr-RS';
 
 if (statNumbers.length) {
   const countObserver = new IntersectionObserver((entries, observer) => {
@@ -15,12 +16,12 @@ if (statNumbers.length) {
         const eased = 1 - Math.pow(1 - progress, 3);
         const value = Math.floor(eased * target);
 
-        el.textContent = value.toLocaleString('sr-RS');
+        el.textContent = value.toLocaleString(numberLocale);
 
         if (progress < 1) {
           requestAnimationFrame(animate);
         } else {
-          el.textContent = target.toLocaleString('sr-RS');
+          el.textContent = target.toLocaleString(numberLocale);
         }
       };
 
