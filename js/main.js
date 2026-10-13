@@ -2,6 +2,10 @@ const statNumbers = document.querySelectorAll('[data-count]');
 const numberLocale = document.documentElement.lang === 'en' ? 'en-GB' : 'sr-RS';
 
 if (statNumbers.length) {
+  // The real values are in the HTML for search engines and visitors without JS;
+  // reset them to 0 so the count-up animation can run when they scroll into view.
+  statNumbers.forEach((el) => { el.textContent = '0'; });
+
   const countObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
