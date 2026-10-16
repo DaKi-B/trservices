@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta http-equiv="refresh" content="0; url=sr/index.html">
-  <title>Redirect</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TR Services</title>
+  <link rel="alternate" hreflang="sr" href="sr/index.html">
+  <link rel="alternate" hreflang="en" href="en/index.html">
+  <script>
+    // Pick the site language: saved choice from the SR/EN switch first,
+    // then the browser language (Serbian and neighbouring languages -> SR).
+    (function () {
+      var lang = null;
+      try { lang = localStorage.getItem('trs-lang'); } catch (e) {}
+      if (lang !== 'sr' && lang !== 'en') {
+        var langs = navigator.languages || [navigator.language || ''];
+        lang = 'en';
+        for (var i = 0; i < langs.length; i++) {
+          var code = String(langs[i]).toLowerCase().split('-')[0];
+          if (['sr', 'hr', 'bs', 'sh', 'cnr', 'mk', 'sl'].indexOf(code) !== -1) { lang = 'sr'; break; }
+          if (code === 'en') break;
+        }
+      }
+      location.replace(lang + '/index.html' + location.hash);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=sr/index.html"></noscript>
 </head>
 <body>
+  <p><a href="sr/index.html">Srpski</a> · <a href="en/index.html">English</a></p>
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Stranica nije pronađena · Page not found | TR Services</title>
+  <script>
+    // This page can be served at any depth, and the site lives under
+    // /trservices/ on GitHub Pages but at / on its own domain. Point all
+    // relative links at the site root so styles, logo and links resolve.
+    (function () {
+      var base = location.pathname.indexOf('/trservices/') === 0 ? '/trservices/' : '/';
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0f172a">
+  <style>
+    .not-found { min-height: calc(100vh - 80px); display: grid; place-items: center; text-align: center; padding: 64px 16px; }
+    .not-found-code { font-size: clamp(4rem, 14vw, 7rem); font-weight: 700; line-height: 1; color: rgb(230, 0, 0); margin: 0 0 18px; }
+    .not-found h1 { margin: 0 0 10px; }
+    .not-found p { margin: 0 auto 8px; max-width: 46ch; color: var(--muted); }
+    .not-found-en { margin-top: 40px !important; padding-top: 28px; border-top: 1px solid rgba(15, 23, 42, 0.1); }
+    .not-found-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/trsLogo.png" alt="TR Services logo">
+      </a>
+    </div>
+  </header>
+
+  <main class="not-found">
+    <div>
+      <div class="not-found-code">404</div>
+
+      <h1>Stranica nije pronađena</h1>
+      <p>Stranica koju tražite ne postoji ili je premeštena.</p>
+      <div class="not-found-actions">
+        <a href="sr/index.html" class="btn btn-primary">Početna strana</a>
+        <a href="sr/index.html#contact" class="btn btn-ghost">Kontakt</a>
+      </div>
+
+      <h2 class="not-found-en">Page not found</h2>
+      <p>The page you are looking for doesn't exist or has been moved.</p>
+      <div class="not-found-actions">
+        <a href="en/index.html" class="btn btn-primary">Home page</a>
+        <a href="en/index.html#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
