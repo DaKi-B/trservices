@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/cp -R index.html 404.html robots.txt sitemap.xml .htaccess css js img sr en $DEPLOYPATH

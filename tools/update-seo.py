@@ -14,7 +14,7 @@ import os
 import re
 from datetime import date
 
-BASE_URL = "https://daki-b.github.io/trservices/"
+BASE_URL = "https://trservices.rs/"
 
 # Serbian page -> matching English page (paths relative to sr/ and en/)
 PAGES = {

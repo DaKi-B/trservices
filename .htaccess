@@ -1,0 +1,13 @@
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Leave SSL certificate checks (AutoSSL / Let's Encrypt) untouched
+  RewriteRule ^\.well-known/ - [L]
+
+  # Send http://, www. and the trs.rs alias to https://trservices.rs
+  RewriteCond %{HTTP_HOST} !^trservices\.rs$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://trservices.rs%{REQUEST_URI} [R=301,L]
+</IfModule>
